@@ -1,6 +1,6 @@
 import * as pages from 'tns-core-modules/ui/page';
 import { HelloWorldModel } from './main-view-model';
-import { CameraPosition, VideoRecorder } from 'nativescript-videorecorder';
+import { CameraPosition, VideoRecorder } from 'nativescript-videorecorder-x';
 import { topmost } from 'tns-core-modules/ui/frame';
 
 let page;

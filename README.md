@@ -1,15 +1,17 @@
-[![npm](https://img.shields.io/npm/v/nativescript-videorecorder.svg)](https://www.npmjs.com/package/nativescript-videorecorder)
-[![npm](https://img.shields.io/npm/dt/nativescript-videorecorder.svg?label=npm%20downloads)](https://www.npmjs.com/package/nativescript-videorecorder)
+[![npm](https://img.shields.io/npm/v/nativescript-videorecorder-x.svg)](https://www.npmjs.com/package/nativescript-videorecorder-x)
+[![npm](https://img.shields.io/npm/dt/nativescript-videorecorder-x.svg?label=npm%20downloads)](https://www.npmjs.com/package/nativescript-videorecorder-x)
 # NativeScript VideoRecorder
+This is derived from nativescript-videorecorder with ONLY a change to work with AndroidX. 
+Once nativescript-videorecorder plugin is updated, this will be deprecated.
 
 ## Install
-`tns plugin add nativescript-videorecorder`
+`tns plugin add nativescript-videorecorder-x`
 
 ## QuickStart
 
 #### JavaScript
 ```js
-var vr = require('nativescript-videorecorder');
+var vr = require('nativescript-videorecorder-x');
 
 var options = {
     saveToGallery: true,
@@ -31,7 +33,7 @@ videorecorder.record().then((data)=>{
 
 #### TypeScript
 ```ts
-import { VideoRecorder, Options as VideoRecorderOptions } from 'nativescript-videorecorder';
+import { VideoRecorder, Options as VideoRecorderOptions } from 'nativescript-videorecorder-x';
 
 const options: VideoRecorderOptions = {
     hd: true
@@ -88,7 +90,7 @@ Promises above can be rejected with:
 AdvancedVideoView does not open the device camera application, but rather allows you to embed the camera view in your app. You can then add buttons over it to start/stop recording. It allows for a deeper level of UI customization.
 
 ```xml
-<Page xmlns="http://schemas.nativescript.org/tns.xsd" xmlns:recorder="nativescript-videorecorder/advanced">
+<Page xmlns="http://schemas.nativescript.org/tns.xsd" xmlns:recorder="nativescript-videorecorder-x/advanced">
 <recorder:AdvancedVideoView quality="highest" cameraPosition="front" id="camera"/>
 ```
 

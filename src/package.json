@@ -1,5 +1,5 @@
 {
-  "name": "nativescript-videorecorder",
+  "name": "nativescript-videorecorder-x",
   "version": "3.0.0-beta.2",
   "description": "NativeScript videorecording plugin",
   "main": "videorecorder",
@@ -17,12 +17,12 @@
     "test.android": "npm i && npm run tsc && npm run tslint && cd ../demo && tns build android && tns test android --justlaunch",
     "test.ios": "npm i && npm run tsc && npm run tslint && cd ../demo && tns build ios && tns test ios --justlaunch",
     "tslint": "cd .. && tslint \"**/*.ts\" --config tslint.json --exclude \"**/node_modules/**\"",
-    "plugin.link": "npm link && cd ../demo && npm link nativescript-videorecorder && cd ../src",
+    "plugin.link": "npm link && cd ../demo && npm link nativescript-videorecorder-x && cd ../src",
     "plugin.tscwatch": "npm run tsc -- -w",
     "demo.ios": "npm i && npm run tsc && cd ../demo && tns run ios --syncAllFiles",
     "demo.android": "npm i && npm run tsc && cd ../demo && tns run android --syncAllFiles",
     "demo.reset": "cd ../demo && rimraf platforms",
-    "plugin.prepare": "npm run tsc && cd ../demo && tns plugin remove nativescript-videorecorder && tns plugin add ../src",
+    "plugin.prepare": "npm run tsc && cd ../demo && tns plugin remove nativescript-videorecorder-x && tns plugin add ../src",
     "clean": "cd ../demo && rimraf hooks node_modules platforms && cd ../src && rimraf node_modules && npm run plugin.link",
     "ci.tslint": "npm i && tslint '**/*.ts' --config '../tslint.json' --exclude '**/node_modules/**'"
   },
@@ -45,10 +45,10 @@
     }
   ],
   "bugs": {
-    "url": "https://github.com/triniwiz/nativescript-videorecorder/issues"
+    "url": "https://github.com/triniwiz/nativescript-videorecorder-x/issues"
   },
   "license": "Apache-2.0",
-  "homepage": "https://github.com/triniwiz/nativescript-videorecorder",
+  "homepage": "https://github.com/triniwiz/nativescript-videorecorder-x",
   "readmeFilename": "README.md",
   "devDependencies": {
     "tns-core-modules": "^5.0.0",

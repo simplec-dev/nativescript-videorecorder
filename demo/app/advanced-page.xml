@@ -1,7 +1,7 @@
 <Page
     xmlns="http://schemas.nativescript.org/tns.xsd" navigatingTo="navigatingTo"
     xmlns:VideoPlayer="nativescript-videoplayer"
-    xmlns:recorder="nativescript-videorecorder/advanced" loaded="loaded">
+    xmlns:recorder="nativescript-videorecorder-x/advanced" loaded="loaded">
     <ActionBar title="Advanced VideoRecorder"/>
     <StackLayout margin="20 0">
         <recorder:AdvancedVideoView height="40%" quality="1080p" cameraPosition="front" id="recorderView" fill="true" thumbnailCount="1"/>

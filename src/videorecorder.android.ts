@@ -31,7 +31,7 @@ export class VideoRecorder extends VideoRecorderCommon {
   }
 
   public static isAvailable() {
-    return app.android.currentContext
+    return app.android.context
       .getPackageManager()
       .hasSystemFeature(android.content.pm.PackageManager.FEATURE_CAMERA);
   }
@@ -82,7 +82,7 @@ export class VideoRecorder extends VideoRecorderCommon {
             android.os.Environment.DIRECTORY_DCIM
           ).getAbsolutePath() + '/Camera';
       } else {
-        path = app.android.currentContext
+        path = app.android.context
           .getExternalFilesDir(null)
           .getAbsolutePath();
       }
@@ -90,10 +90,16 @@ export class VideoRecorder extends VideoRecorderCommon {
       file = new java.io.File(path + '/' + fileName);
 
       if (sdkVersionInt >= 21) {
+        var androidSupport = null;
+          if (androidx && androidx.core) {
+            androidSupport = androidx.core;
+          } else  if (android.support && android.support.v4) {
+            androidSupport = android.support.v4;
+          } 
         tempPictureUri = (<any>(
-          android.support.v4.content
+          androidSupport.content
         )).FileProvider.getUriForFile(
-          app.android.foregroundActivity, // or app.android.currentContext ??
+          app.android.foregroundActivity, // or app.android.context ??
           `${pkgName}.provider`,
           file
         );

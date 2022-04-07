@@ -17,6 +17,7 @@ const RESULT_CANCELED = 0;
 const RESULT_OK = -1;
 const REQUEST_VIDEO_CAPTURE = 999;
 
+
 export class VideoRecorder extends VideoRecorderCommon {
   public requestPermissions(options?: Options): Promise<void> {
     return permissions.requestPermissions(
@@ -91,8 +92,8 @@ export class VideoRecorder extends VideoRecorderCommon {
 
       if (sdkVersionInt >= 21) {
         var androidSupport = null;
-          if (androidx && androidx.core) {
-            androidSupport = androidx.core;
+          if (androidx && (androidx as any).core) {
+            androidSupport = (androidx as any).core;
           } else  if (android.support && android.support.v4) {
             androidSupport = android.support.v4;
           } 

@@ -1,6 +1,6 @@
 {
   "name": "nativescript-videorecorder-x",
-  "version": "1.0.3-android-x",
+  "version": "1.0.4",
   "description": "NativeScript videorecording plugin",
   "main": "videorecorder",
   "typings": "index.d.ts",
